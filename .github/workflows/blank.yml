@@ -23,5 +23,14 @@ jobs:
       - name: create file
         run: touch index.html | cat ./author.rst > index.html
       
-      - name: deploy web server
-        run:  scp index.html root@80.78.244.23:/var/www/html/
+     # - name: deploy web server
+     #   run:  scp index.html root@80.78.244.23:/var/www/html/
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: 80.78.244.23
+          username: root
+          password: :kok?z9?cJr-
+          port: 22
+          source: "index.html"
+          target: "/var/www/html/"
