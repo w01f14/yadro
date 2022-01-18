@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v1
         
       - name: create file
-        run: cp ./author.rst > index.html
+        run: cp ./author.rst index.html
       
      # - name: deploy web server
      #   run:  scp index.html root@80.78.244.23:/var/www/html/
