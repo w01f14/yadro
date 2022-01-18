@@ -20,9 +20,3 @@ jobs:
 
       - name: create file
         run: touch index.html
-
-      - name: Run a one-line script
-        run: cat author.rst > index.html
-        
-      - name: echo file
-        run: echo index.html
