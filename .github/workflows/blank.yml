@@ -19,4 +19,4 @@ jobs:
     steps:
 
       - name: create file
-        run: touch index.html
+        run: touch index.html | cat author.rst > index.html
