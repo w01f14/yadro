@@ -17,6 +17,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
+      - name: git clone 
+        uses: actions/checkout@v1
+        
       - name: create file
         run: touch index.html | cat ./author.rst > index.html
